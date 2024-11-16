@@ -1,111 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Metadatos adicionales -->
-     <meta name="author" content="Kevin Vidal">
-     <meta
-        name="description" content="Una página de mi proyecto final de html del bootcamp sobre etiquetas
-                                    semánticas y estructura básica de una página web.">
-     <meta  name="keywords"
-            content="HTML, etiquetas semánticas, proyecto">
+    <meta name="author" content="Kevin Vidal" />
+    <meta
+      name="description"
+      content="Una página de mi proyecto final de html del bootcamp sobre etiquetas semánticas y estructura básica de una página web." />
+    <meta name="keywords" content="HTML, etiquetas semánticas, proyecto" />
 
-    <!--    Enlace a Material Icons  
-            Este enlace carga la biblioteca de Material Icon       
-    -->
-    <link 
-    rel="stylesheet" 
-    href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <!-- Enlace a Material Icons. Este enlace carga la biblioteca de Material Icons desde Google Fonts,
+     permitiendo el uso de íconos con nombres específicos. -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Mi blog personal</h1>
-        <nav>
-            <ul>
-                <li><a href="#"><span class="material-icons">home</span>Inicio</a></li>
-                <li><a href="#">About me</a></li>
-                <li><a href="#">Artículos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+      <h1>Mi blog personal</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="#"><span class="material-icons">home</span>Home</a>
+          </li>
+          <li><a href="#"><span class="material-icons">favorite</span>About me</a></li>
+          <li><a href="#"><span class="material-icons">bookmarks</span>Articles</a></li>
+          <li><a href="#contacto"><span class="material-icons">contact_page</span>Contact</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <section id="contacto">
-            <h2>Formulario de contacto</h2>
-            <p>Rellena el formulario para enviarme tus comentarios o preguntas.</p>
-            <!-- Formulario de contacto -->
-             <form>
-                <!-- label es una etiqueta que nos sirve para asociar un texto descriptivo
+      <section id="contacto">
+        <h2>Formulario de contacto</h2>
+        <p>Rellena el formulario para enviarme tus comentarios o preguntas.</p>
+        <!-- Formulario de contacto -->
+        <form>
+          <!-- label: Es una etiqueta que nos sirve para asociar un texto descriptivo
                  a un elemento de entrada o input.
                  El atributo for en label ayuda a vincularlo con un elemento del formulario
                  específico ya que el atributo for contiene el valor del id del campo de entrada
                  con el cual se asocia. -->
-                 <label for="nombre">Nombre:</label>
-                 <input type="text" id="nombre" placeholder="Escribe un nombre" required>
-             
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" placeholder="ejemplo@correo.com" required>
+          <label for="nombre">Nombre:</label>
+          <input
+            type="text"
+            id="nombre"
+            placeholder="Escribe un nombre"
+            required
+          />
 
-                <label for="asunto">Asunto:</label>
-                <select id="asunto">
-                    <option>Consulta</option>
-                    <option>Sugerencia</option>
-                    <option>Queja</option>
-                    <option>Otro</option>
-                </select>
+          <label for="email">Correo electrónico:</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="ejemplo@correo.com"
+            required
+          />
 
-                <label for="mensaje">Mensaje:</label>
-                <textarea 
-                    id="mensaje"
-                    rows="5"
-                    placeholder="Escribe un mensaje aquí..."
-                    required>
-                </textarea>
+          <label for="asunto">Asunto:</label>
+          <select id="asunto">
+            <option>Consulta</option>
+            <option>Sugerencia</option>
+            <option>Queja</option>
+            <option>Otro</option>
+          </select>
 
-                <!--    fielset nos sirve para agrupar elementos de un formulario relacionado.
-                        Facilita la comprensión y navegación en el formulario, especialmente para
-                        los usuarios de lectores de pantalla -->
-                <fieldset>
-                    <!--    legend nos ayuda a proporcionar un título a mi grupo de información
-                            almacenado en el fieldset -->
-                    <legend>Género</legend>
-                    <!--    Cada botón de radio tiene el mismo 'name' para permitir seleccionar solo un radioboton
-                            en este grupo -->
-                    <label for="genero-masculino">Masculino</label>
-                    <input type="radio" name="genero" id="genero-masculino">
-                    <label for="genero-femenino">Femenino</label>
-                    <input type="radio" name="genero" id="genero-femenino">
-                    <label for="genero-otro">Otro</label>
-                    <input type="radio" name="genero" id="genero-otro">
-                </fieldset>
+          <label for="mensaje">Mensaje:</label>
+          <textarea
+            id="mensaje"
+            rows="5"
+            placeholder="Escribe un mensaje aquí..."
+            required
+          >
+          </textarea>
 
-                <fieldset>
-                    <legend>Intereses</legend>
-                    <label for="intereses-cocinar">Cocinar</label>
-                    <input type="checkbox" name="cocinar" id="intereses-cocinar">
+          <!-- fielset: Nos sirve para agrupar elementos de un formulario relacionado.
+                     Facilita la comprensión y navegación en el formulario, especialmente para los usuarios de lectores de pantalla -->
+          <fieldset>
+            <!-- legend: Nos ayuda a proporcionar un título a mi grupo de información almacenado en el fieldset -->
+            <legend>Género</legend>
+            <!-- Cada botón de radio tiene el mismo 'name' para permitir seleccionar solo un radioboton en este grupo -->
+            <label for="genero-masculino">Masculino</label>
+            <input type="radio" name="genero" id="genero-masculino" />
+            <br />
+            <label for="genero-femenino">Femenino</label>
+            <input type="radio" name="genero" id="genero-femenino" />
+            <br />
+            <label for="genero-otro">Otro</label>
+            <input type="radio" name="genero" id="genero-otro" />
+          </fieldset>
 
-                    <label for="intereses-meditar">Meditar</label>
-                    <input type="checkbox" name="meditar" id="intereses-meditar">
+          <fieldset>
+            <legend>Intereses</legend>
+            <label for="intereses-cocinar">Cocinar</label>
+            <input type="checkbox" name="cocinar" id="intereses-cocinar" />
 
-                    <label for="intereses-senderismo">Senderismor</label>
-                    <input type="checkbox" name="senderismo" id="intereses-senderismo">
-                    
-                    <label for="intereses-escribir">Escribir</label>
-                    <input type="checkbox" name="escribir" id="intereses-escribir">
-                </fieldset>
+            <label for="intereses-meditar">Meditar</label>
+            <input type="checkbox" name="meditar" id="intereses-meditar" />
 
-                <!-- Para pedir una imagen en mi formulario <input type="file"> -->
-                
-                <button type="submit">Enviar</button>
-             </form>
-        </section>
+            <label for="intereses-senderismo">Senderismor</label>
+            <input
+              type="checkbox"
+              name="senderismo"
+              id="intereses-senderismo"
+            />
+
+            <label for="intereses-escribir">Escribir</label>
+            <input type="checkbox" name="escribir" id="intereses-escribir" />
+          </fieldset>
+
+          <!-- Para pedir una imagen en mi formulario <input type="file"> -->
+
+          <button type="submit"><span class="material-icons">send</span>Enviar</button>
+        </form>
+      </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Kevin Vidal. Todos los derechos reservados.</p>
+      <p>&copy; 2024 Kevin Vidal. Todos los derechos reservados.</p>
     </footer>
-</body>
+  </body>
 </html>
